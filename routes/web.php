@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $object = [1,2,3];
+    Debugbar::info($object);
+    Debugbar::error('Error!');
+    Debugbar::warning('Watch out…');
+    Debugbar::addMessage('Another message', 'mylabel');
     return view('welcome');
 });
+
+// https://github.com/rap2hpoutre/laravel-log-viewer
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');

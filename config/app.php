@@ -165,6 +165,11 @@ return [
         /*
          * Package Service Providers...
          */
+        // https://github.com/barryvdh/laravel-debugbar
+        Barryvdh\Debugbar\ServiceProvider::class,
+        // https://github.com/rap2hpoutre/laravel-log-viewer
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -175,6 +180,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // step 2: Providers/RiakServiceProvider.php
+        App\Providers\RiakServiceProvider::class,
     ],
 
     /*
@@ -226,6 +233,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        // https://github.com/barryvdh/laravel-debugbar
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],
 
