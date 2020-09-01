@@ -2,6 +2,9 @@
 // step 1: Providers/RiakServiceProvider.php
 namespace App\Providers;
 
+use App\Services\AppleService;
+use App\Services\BananaService;
+use App\Services\CarService;
 use Illuminate\Support\ServiceProvider;
 
 class RiakServiceProvider extends ServiceProvider
@@ -35,6 +38,21 @@ class RiakServiceProvider extends ServiceProvider
         });
         $this->app->singleton('service3', function(){
             return 'service3';
+        });
+
+        $this->app->singleton('CarService', function ($app) {
+            return new CarService();
+        });
+
+        $this->app->singleton('AppleService', function ($app) {
+            $apple = new AppleService('apple1', 100);
+            // dependence on other service
+            $apple->setCarService(app('CarService'));
+            return $apple;
+        });
+
+        $this->app->singleton('BananaService', function ($app) {
+            return new BananaService();
         });
     }
 

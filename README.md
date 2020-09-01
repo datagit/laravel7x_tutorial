@@ -15,3 +15,5 @@ php artisan tinker
     # resolve('riak', ['id' => 1])
     # app('riak', ['id' => 1])
 ```
+4. interface - contracts: https://laravel.com/docs/7.x/contracts#introduction
+5. How to create Facade: https://www.tutorialspoint.com/laravel/laravel_facades.htm
