@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('userstore', 'Controller@store');
+
 Route::get('/', function () {
     $object = [1,2,3];
     Debugbar::info($object);

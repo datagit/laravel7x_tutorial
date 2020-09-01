@@ -17,3 +17,8 @@ php artisan tinker
 ```
 4. interface - contracts: https://laravel.com/docs/7.x/contracts#introduction
 5. How to create Facade: https://www.tutorialspoint.com/laravel/laravel_facades.htm
+6. Custom Validation Rules with form request validation method in Laravel: https://lavalite.org/blog/custom-validation-rules-with-form-request-validation-method-in-laravel
+```bash
+php artisan make:request UserStoreRequest
+php artisan make:provider ValidatorServiceProvider
+```
