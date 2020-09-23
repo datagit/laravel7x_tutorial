@@ -22,3 +22,12 @@ php artisan tinker
 php artisan make:request UserStoreRequest
 php artisan make:provider ValidatorServiceProvider
 ```
+- check connection to DB
+```bash
+php artisan tinker
+DB::connection()->getPdo()
+```
+```bash
+php artisan make:controller PostController
+# PostController@show
+```
