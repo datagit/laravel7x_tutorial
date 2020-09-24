@@ -26,5 +26,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/contact', function() {
+    return view('contact');
+});
+
 // https://github.com/rap2hpoutre/laravel-log-viewer
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
