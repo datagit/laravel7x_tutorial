@@ -31,3 +31,15 @@ DB::connection()->getPdo()
 php artisan make:controller PostController
 # PostController@show
 ```
+```bash
+# create model
+php artisan help make:model
+php artisan make:model Project -mc
+# Model created successfully.
+# Created Migration: 2020_09_24_145059_create_projects_table
+# Controller created successfully.
+
+php artisan migrate
+# Migrating: 2020_09_24_145059_create_projects_table
+# Migrated:  2020_09_24_145059_create_projects_table (0.02 seconds)
+```
