@@ -1,4 +1,4 @@
 <div>
-    <h1>{{ dd($post) }}</h1>
+    <div>{{ dd($post) }}</div>
     <h1>{{$slug}}</h1>
 </div>
