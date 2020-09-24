@@ -43,3 +43,9 @@ php artisan migrate
 # Migrating: 2020_09_24_145059_create_projects_table
 # Migrated:  2020_09_24_145059_create_projects_table (0.02 seconds)
 ```
+- mix
+```bash
+npm install
+npm run dev
+npm run watch
+```

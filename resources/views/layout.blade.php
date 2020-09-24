@@ -8,6 +8,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
 
     <!-- Styles -->
     <style>
@@ -65,5 +66,6 @@
 </head>
 <body>
     @yield('content')
+    <script src="js/app.js"></script>
 </body>
 </html>

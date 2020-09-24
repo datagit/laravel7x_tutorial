@@ -1,1 +1,7 @@
-//
+// define variables here -----------------
+$primary: green;
+
+// define scss here -----------------
+body {
+    color: $primary;
+}
