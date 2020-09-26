@@ -2,6 +2,7 @@
 // php artisan make:controller PostController
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Post;
@@ -25,4 +26,32 @@ class PostController extends Controller
             'slug' => $slug,
         ]);
     }
+
+    public function userTestChunk()
+    {
+        // the same paging in DB
+//        User::chunk(200, function ($users) {
+//            foreach ($users as $user) {
+//                $name = (rand(0,1) == 1) ? $user->name . '_add1' : $user->name . '_add0';
+//                // might be more logic here
+//                $user->update(['name' => $name]);
+//            }
+//        });
+
+        User::where('id', '>', 0)->chunk(200, function ($users) {
+            var_dump(count($users));
+            foreach ($users as $user) {
+                $name = (rand(0,1) == 1) ? $user->name . '_add1' : $user->name . '_add0';
+                // might be more logic here
+                $user->update(['name' => $name]);
+            }
+        });
+
+        return view('post', [
+            'post' => 'POST',
+            'slug' => 'slug',
+        ]);
+
+    }
+
 }
