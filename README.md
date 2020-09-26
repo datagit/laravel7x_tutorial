@@ -49,3 +49,8 @@ npm install
 npm run dev
 npm run watch
 ```
+- form
+```
+@scrf
+validation form
+```
