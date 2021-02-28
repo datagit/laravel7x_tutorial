@@ -182,6 +182,9 @@ return [
 
         // step 2: Providers/RiakServiceProvider.php
         App\Providers\RiakServiceProvider::class,
+
+        // IDE Helper
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
     ],
 
     /*
